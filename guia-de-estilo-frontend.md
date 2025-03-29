@@ -48,3 +48,65 @@ models/: Contiene las definiciones de los modelos de datos y las interfaces que 
 pages/: Contiene los componentes de nivel superior o "páginas". Estos componentes pueden contener múltiples componentes más pequeños y se encargan de representar las vistas completas. Cada página generalmente tiene una ruta específica en la aplicación.
 
 services/: Contiene servicios que interactúan con APIs externas, bases de datos o cualquier otra lógica de negocio fuera del alcance de los componentes y hooks. Estos servicios gestionan las peticiones y respuestas, y están destinados a ser reutilizados en múltiples partes de la aplicación.
+## IDEs sugeridos y sus configuraciones óptimas
+
+###  Visual Studio Code (VS Code)
+
+**Visual Studio Code** es el IDE recomendado para el desarrollo frontend debido a su compatibilidad con tecnologías modernas como TypeScript, React, ESLint y Prettier.
+
+###  Configuraciones óptimas del entorno de desarrollo
+
+Para garantizar coherencia y compatibilidad entre los distintos miembros del equipo, se deben cumplir las siguientes configuraciones:
+
+- **Uso de la misma versión de Node.js**  
+  Todos los miembros del equipo deben trabajar con la **misma versión de Node.js** para evitar diferencias de comportamiento o errores inesperados.  
+  Se recomienda utilizar herramientas como [nvm](https://github.com/nvm-sh/nvm) para gestionar versiones de Node.js fácilmente.
+
+- **Gestor de paquetes consistente**  
+ Todos los miembros deben usar el mismo  **npm** para evitar conflictos con los archivos de bloqueo (`package-lock.json` o `yarn.lock`). 
+
+- **Configuración estándar del proyecto**  
+  Una vez clonado el repositorio, cada miembro debe ejecutar:
+  ```bash
+  npm install
+  ```
+
+## Plugins esenciales para mejorar la productividad y calidad del código
+
+###  ESLint
+
+Herramienta para análisis de código estático. Detecta errores de estilo, convenciones inconsistentes y posibles bugs.
+
+- Reglas personalizables.
+- Integración con VS Code.
+- Archivo `.eslintrc` en la raíz del proyecto define el estilo del equipo.
+
+###  Prettier – Code Formatter
+
+Formateador de código automático. Ayuda a mantener una apariencia uniforme en todos los archivos del proyecto.
+
+- Se encarga de cuestiones como comillas, indentación, uso de punto y coma, saltos de línea, etc.
+- Archivo `.prettierrc` con configuración personalizada.
+
+## Guía de configuración de ambientes
+
+### Pasos para configurar el entorno local
+
+**Instalar Node.js**  
+Asegurarse de que todos los miembros utilicen la misma versión.  
+Se recomienda usar nvm para instalarla y gestionarla fácilmente.
+
+**Clonar el repositorio y descargar dependencias**
+```bash
+git clone [url-del-repo]
+cd [carpeta-del-proyecto]
+npm install
+```
+
+**Instalar ESLint y Prettier (si no están en el proyecto aún)**
+```bash
+npm install --save-dev eslint prettier
+```
+
+**Verificar configuración compartida de VS Code**  
+Comprobar que el proyecto incluya el archivo `.vscode/settings.json` y que cada integrante lo tenga habilitado.
