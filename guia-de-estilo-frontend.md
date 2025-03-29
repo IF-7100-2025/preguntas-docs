@@ -18,6 +18,22 @@ La lógica, la UI y la gestión del estado deben estar correctamente separadas p
 - Los hooks personalizados deben comenzar con el prefijo **use** seguido de una descripción clara de su función (por ejemplo, `useFetchData.ts`).
 - Los nombres de las interfaces deben comenzar con **I** (por ejemplo, `IUser`).
 
+### - Convenciones para la declaración de métodos y variables
+
+**Métodos**:
+- Los métodos deben seguir la convención **camelCase** (por ejemplo, `handleClick`).
+- Declarar los métodos como funciones flecha, por ejemplo: `const handleClick = () => {}`
+- Los métodos deben ser pequeños y centrarse en una única tarea. Los nombres deben ser descriptivos y comenzar con un verbo (por ejemplo, `fetchData`, `handleSubmit`).
+
+**Variables**:
+- Las variables deben seguir la convención **camelCase** (por ejemplo, `userData`, `isLoading`).
+- Las variables booleanas deben tener un prefijo como **is**, **has**, **can**, indicando un valor verdadero/falso (por ejemplo, `isAuthenticated`, `canEdit`).
+- Para constantes que no cambian, usar **UPPER_SNAKE_CASE** (por ejemplo, `API_URL`).
+
+**Funciones**:
+- Las funciones deben seguir la convención **camelCase** (por ejemplo, `getUserInfo`).
+- Las funciones que se usan dentro de los componentes deben declararse como funciones flecha (arrow functions) para mantener el contexto adecuado del `this`.
+
 ### - Separación de responsabilidades en el código
 assets/: Contiene recursos estáticos como imágenes, fuentes, íconos y otros archivos multimedia. Esta carpeta se utiliza para almacenar todos los activos visuales o archivos no relacionados directamente con la lógica de la aplicación.
 
@@ -30,23 +46,3 @@ models/: Contiene las definiciones de los modelos de datos y las interfaces que 
 pages/: Contiene los componentes de nivel superior o "páginas". Estos componentes pueden contener múltiples componentes más pequeños y se encargan de representar las vistas completas. Cada página generalmente tiene una ruta específica en la aplicación.
 
 services/: Contiene servicios que interactúan con APIs externas, bases de datos o cualquier otra lógica de negocio fuera del alcance de los componentes y hooks. Estos servicios gestionan las peticiones y respuestas, y están destinados a ser reutilizados en múltiples partes de la aplicación.
-
-### - Convenciones para la declaración de clases, métodos, variables y funciones
-
-**Componentes**:
-- Los componentes deben ser declarados en **PascalCase**.
-- Utilizar componentes funcionales con hooks en lugar de clases siempre que sea posible.
-- Si el componente necesita manejar el estado, se deben usar hooks como `useState` y `useEffect`.
-
-**Métodos**:
-- Los métodos deben seguir la convención **camelCase** (por ejemplo, `handleClick`).
-- Los métodos deben ser pequeños y centrarse en una única tarea. Los nombres deben ser descriptivos y comenzar con un verbo (por ejemplo, `fetchData`, `handleSubmit`).
-
-**Variables**:
-- Las variables deben seguir la convención **camelCase** (por ejemplo, `userData`, `isLoading`).
-- Las variables booleanas deben tener un prefijo como **is**, **has**, **can**, indicando un valor verdadero/falso (por ejemplo, `isAuthenticated`, `canEdit`).
-- Para constantes que no cambian, usar **UPPER_SNAKE_CASE** (por ejemplo, `API_URL`).
-
-**Funciones**:
-- Las funciones deben seguir la convención **camelCase** (por ejemplo, `getUserInfo`).
-- Las funciones que se usan dentro de los componentes deben declararse como funciones flecha (arrow functions) para mantener el contexto adecuado del `this`.
