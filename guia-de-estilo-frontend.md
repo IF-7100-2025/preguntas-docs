@@ -16,7 +16,9 @@ La lógica, la UI y la gestión del estado deben estar correctamente separadas p
 
 - Los archivos de componentes deben utilizar **PascalCase** (por ejemplo, `UserCard.tsx`).
 - Los hooks personalizados deben comenzar con el prefijo **use** seguido de una descripción clara de su función (por ejemplo, `useFetchData.ts`).
-- Los nombres de las interfaces deben comenzar con **I** (por ejemplo, `IUser`).
+- Las clases que representan modelos de datos deben nombrarse de la siguiente manera: `purchases.models.ts`.
+- Tanto las interface como los type deben respetar el formato **PascalCase** (por ejemplo, `interface Event`, `type Response`).
+- Los services deben nombrarse de la siguiente manera: `events.service.ts`.
 
 ### - Convenciones para la declaración de métodos y variables
 
