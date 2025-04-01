@@ -4,7 +4,7 @@
 
 **Grupo:** _Conti_  
 **Versión:** 1.0 - Despliegue Local  
-**Elaborado por:** Brandon Vargas Solano C28223  
+**Elaborado por:** Brandon Vargas Solano C28223
 
 ---
 
@@ -13,11 +13,13 @@
 ### 🔍 Requisitos Previos
 
 #### 💻 Software mínimo:
+
 - Git (última versión)
 - Git Bash (última versión)
 - Java (Versión 17+)
 
 #### ⚙️ Hardware recomendado:
+
 - 8 GB de RAM
 - 1 núcleo de CPU
 - 2 GB de almacenamiento
@@ -31,48 +33,52 @@
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/leocamachocr/spring-cloud-basic-example.git
-cd spring-cloud-basic-example
+git clone https://github.com/IF-7100-2025/preguntas-backend.git
+cd preguntas-backend
 ```
 
-### 2. Iniciar los servicios (cada uno en una terminal nueva)
+## Dos opciones para lanzar el proyecto
+
+Aquí se explica que puedes elegir entre:
+
+1. **Usar IntelliJ IDEA (IDE gráfico)**:
+
+   - Abres el proyecto en IntelliJ
+   - Ejecutas cada módulo (Eureka y Gateway) directamente desde el IDE
+   - Ideal para desarrollo/debugging
+
+2. **Usar terminal/comandos**:
+   - Ejecutas los servicios manualmente mediante comandos Gradle
+   - Necesitas una terminal para cada servicio
+   - Más directo pero menos visual
+
+Ambos métodos son válidos y producen el mismo resultado final.
 
 #### Terminal 1: Servidor Eureka (Dashboard de servicios)
+
 ```bash
 cd eureka/
 ./gradlew bootRun
 ```
+
 **Verificación:**  
 🔹 Espera hasta ver el mensaje `Started EurekaServerApplication`  
 🔹 Accede al dashboard en [http://localhost:8761](http://localhost:8761)
 
-#### Terminal 2: Servicio de Autenticación
-```bash
-cd authentication-service/
-./gradlew bootRun
-```
-**Verificación:**  
-🔹 Observa los logs de Spring Boot para confirmar inicio exitoso
+#### Terminal 2: Gateway (Puerta de enlace)
 
-#### Terminal 3: Servicio Básico
-```bash
-cd basic-service/
-./gradlew bootRun
-```
-**Verificación:**  
-🔹 Comprueba en Eureka [http://localhost:8761](http://localhost:8761) que el servicio aparezca como "UP"
-
-#### Terminal 4: Gateway (Puerta de enlace)
 ```bash
 cd gateway/
 ./gradlew bootRun
 ```
+
 **Verificación final:**  
 🔹 Todos los servicios deben aparecer como "UP" en el dashboard de Eureka
 
 ---
 
 ### ⏹ Detener los servicios
+
 En cada terminal, presiona `Ctrl + C` para detener los servicios.  
 **Nota:** El orden de apagado no es relevante.
 
@@ -80,12 +86,10 @@ En cada terminal, presiona `Ctrl + C` para detener los servicios.
 
 ## 🔗 Resumen de URLs clave
 
-| Servicio  | URL                                      |
-|-----------|------------------------------------------|
-| Eureka    | [http://localhost:8761](http://localhost:8761) |
-| Gateway   | [http://localhost:8080](http://localhost:8080) |
-| Auth      | [http://localhost:8081](http://localhost:8081) |
-| Basic     | [http://localhost:8082](http://localhost:8082) |
+| Servicio | URL                                            |
+| -------- | ---------------------------------------------- |
+| Eureka   | [http://localhost:8761](http://localhost:8761) |
+| Gateway  | [http://localhost:8080](http://localhost:8080) |
 
 ---
 
