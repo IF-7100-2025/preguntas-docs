@@ -31,11 +31,11 @@ handlers/
   │	└── impl/  
   ├── queries/  
   │	└── impl/  
-jpa/  
+jpa/
   ├── entities/  
   ├── repositories/  
 models/  
-services/
+
 
 ### **api/**
 
@@ -69,9 +69,7 @@ services/
 
 * Define los modelos de dominio de la aplicación, que son representaciones de conceptos del negocio. Esto incluye clases que podrían no estar directamente relacionadas con la persistencia de datos pero que definen la lógica de negocio.
 
-### **6\. session/**
 
-* Se gestionan sesiones de usuario dentro del sistema de autenticación
 
 ## **Manejo de errores**
 
