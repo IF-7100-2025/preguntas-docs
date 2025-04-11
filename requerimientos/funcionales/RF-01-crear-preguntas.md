@@ -21,7 +21,7 @@ Se propone desarrollar una funcionalidad que permita a los estudiantes autentica
 - **Formulario de Creación de Pregunta:** Una interfaz que permitirá al estudiantes ingresar el texto de la pregunta y las posibles respuestas.
 - **Tipo de Pregunta:** La pregunta será de selección múltiple con al menos dos opciones y una o más respuestas correctas.
 - **Asignación de Autor:** El sistema registrará automáticamente al estudiante que creó la pregunta.
-- **Categorización:** El estudiante deberá seleccionar una o varias categorías relevantes para la pregunta, a partir de una lista predefinida o mediante etiquetas.
+- **Categorización:** El estudiante deberá seleccionar una o varias categorías relevantes para la pregunta, a partir de una lista predefinida o dejar que la inteligencia artificial categorice la pregubta.
 - **Indicación de Respuesta Correcta:** El estudiante deberá señalar cuál o cuáles de las opciones de respuesta son correctas.
 - **Adjuntos Opcionales:** Se permitirá incluir archivos (imágenes) de forma opcional para complementar el contenido de la pregunta.
 
