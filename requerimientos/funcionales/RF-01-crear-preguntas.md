@@ -1,4 +1,4 @@
-# Requerimiento Funcional: Crear Pregunta por estudiantes
+# Requerimiento Funcional: Crear Preguntas por estudiantes
 
 ## Descripción
 
