@@ -1,41 +1,41 @@
-# Requerimiento Funcional: Crear Preguntas por estudiantes
+# Requerimiento Funcional: Crear Preguntas por Colaboradores
 
 ## Descripción
 
-**RF-01** Este requerimiento funcional describe la capacidad de los estudiantes autenticados de la plataforma social de aprendizaje para crear y publicar preguntas relacionadas con temas específicos de diversas materias. Esta funcionalidad fomenta el aprendizaje colaborativo, permitiendo que los estudiantes contribuyan al repositorio de contenido académico mediante la formulación de preguntas que pueden ser respondidas por otros miembros de la comunidad.
+**RF-01** Este requerimiento funcional describe la capacidad de los colaboradores autenticados de la plataforma social de aprendizaje para crear y publicar preguntas relacionadas con temas específicos de diversas materias. Esta funcionalidad fomenta el aprendizaje colaborativo, permitiendo que los colaboradores contribuyan al repositorio de contenido académico mediante la formulación de preguntas que pueden ser respondidas por otros miembros de la comunidad.
 
-El alcance de este requerimiento incluye la interfaz del estudiante para la creación de preguntas, el almacenamiento estructurado de las mismas, y su correcta categorización para facilitar su consulta y análisis posterior.
+El alcance de este requerimiento incluye la interfaz del colaborador para la creación de preguntas, el almacenamiento estructurado de las mismas, y su correcta categorización para facilitar su consulta y análisis posterior.
 
 ## Necesidad
 
-Actualmente, los estudiantes universitarios enfrentan desafíos al momento de repasar y reforzar conceptos clave. Esta funcionalidad aborda esa necesidad permitiendo que los estudiantes generen contenido educativo en forma de preguntas, fortaleciendo el aprendizaje entre pares y ofreciendo un canal para recibir retroalimentación y aclarar dudas. Esta dinámica es coherente con el objetivo principal de la plataforma: potenciar el aprendizaje activo, colaborativo y contextualizado.
+Actualmente, los colaboradores universitarios enfrentan desafíos al momento de repasar y reforzar conceptos clave. Esta funcionalidad aborda esa necesidad permitiendo que los colaboradores generen contenido educativo en forma de preguntas, fortaleciendo el aprendizaje entre pares y ofreciendo un canal para recibir retroalimentación y aclarar dudas. Esta dinámica es coherente con el objetivo principal de la plataforma: potenciar el aprendizaje activo, colaborativo y contextualizado.
 
 ## Proceso Actual
 
-En el estado actual del sistema, no existe ninguna funcionalidad que permita a los estudiantes crear preguntas dentro de la plataforma. Las dudas y repasos dependen de clases presenciales o de plataformas externas no integradas al contexto académico de la comunidad estudiantil. Esto limita el acceso al conocimiento generado por otros estudiantes con intereses similares.
+En el estado actual del sistema, no existe ninguna funcionalidad que permita a los colaboradores crear preguntas dentro de la plataforma. Las dudas y repasos dependen de clases presenciales o de plataformas externas no integradas al contexto académico de la comunidad estudiantil. Esto limita el acceso al conocimiento generado por otros colaboradores con intereses similares.
 
 ## Solución Propuesta
 
-Se propone desarrollar una funcionalidad que permita a los estudiantes autenticados crear preguntas en la plataforma. Esta funcionalidad contemplará los siguientes componentes:
+Se propone desarrollar una funcionalidad que permita a los colaboradores autenticados crear preguntas en la plataforma. Esta funcionalidad contemplará los siguientes componentes:
 
-- **Formulario de Creación de Pregunta:** Una interfaz que permitirá al estudiantes ingresar el texto de la pregunta y las posibles respuestas.
+- **Formulario de Creación de Pregunta:** Una interfaz que permitirá a los colaboradores ingresar el texto de la pregunta y las posibles respuestas.
 - **Tipo de Pregunta:** La pregunta será de selección múltiple con al menos dos opciones y una o más respuestas correctas.
-- **Asignación de Autor:** El sistema registrará automáticamente al estudiante que creó la pregunta.
-- **Categorización:** El estudiante deberá seleccionar una o varias categorías relevantes para la pregunta, a partir de una lista predefinida o dejar que la inteligencia artificial categorice la pregunta.
-- **Indicación de Respuesta Correcta:** El estudiante deberá señalar cuál o cuáles de las opciones de respuesta son correctas.
+- **Asignación de Autor:** El sistema registrará automáticamente al colaborador que creó la pregunta.
+- **Categorización:** El colaborador deberá seleccionar una o varias categorías relevantes para la pregunta, a partir de una lista predefinida o dejar que la inteligencia artificial categorice la pregunta.
+- **Indicación de Respuesta Correcta:** El colaborador deberá señalar cuál o cuáles de las opciones de respuesta son correctas.
 - **Adjuntos Opcionales:** Se permitirá incluir archivos (imágenes) de forma opcional para complementar el contenido de la pregunta.
 
 ## Documentos de Referencia
 
-- nada por el momento
+- [Documento de actores](../../arquitectura/actores.md)
 
 ## Casos de Uso Relacionados
 
-- [CU-01: crear preguntas]
+- [CU-01: crear preguntas](../../casos-de-uso/)
 
 ## Criterios de Aceptación
 
-1. El estudiante autenticado podrá crear y publicar preguntas sobre temas específicos.
+1. El colaborador autenticado podrá crear y publicar preguntas sobre temas específicos.
 2. La pregunta será de tipo selección múltiple con opciones y al menos una respuesta correcta.
 3. El sistema deberá registrar al autor de la pregunta.
 4. Las preguntas deben estar asociadas a una o varias categorías.
