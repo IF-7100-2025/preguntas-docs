@@ -1,47 +1,35 @@
 ## Definición de Actores
 
-### Actor: A01-Estudiante
+### Actor: A01-Colaborador
 
-**Tipo y estereotipo:** Actor primario que representa a los estudiantes que utilizan la plataforma.
+**Tipo y estereotipo:** Actor primario que representa a los colaboradores (usuarios) que utilizan la plataforma.
 
 **Descripción:**  
-El estudiante es el principal usuario del sistema. Puede:
-- Publicar preguntas
-- Responder preguntas
+El colaborador es un usuario que interactúa activamente con la plataforma y puede realizar diversas acciones. Sus funciones incluyen:
+
+- Formular preguntas, agregarles material adicional (imágenes) y seleccionar categorías para cada una (máximo 3)
+- Realizar pruebas de autoevaluación de las categorías de su preferencia 
 - Calificar preguntas y respuestas (dando pulgar arriba)
-- Realizar pruebas de autoevaluación
-- Recibir sugerencias de temas que necesita reforzar de acuerdo a su desempeño
+- Recibir sugerencias de temas que necesita reforzar de acuerdo a su desempeño en las pruebas de autoevaluación
 - Revisar su historial de pruebas
-- Reportar contenido inapropiado o incorrecto
+- Reportar contenido inapropiado o incorrecto que incumpla las normas de la comunidad
+- Obtener puntos de contribución (puntos XP) en función de sus aportes a la comunidad (formular y calificar preguntas, reportes, realizar pruebas, etc.). Dichos puntos le permitirán pertenecer a un rango de acuerdo a su puntuación (Aprendiz → Pensador → Sabio).
+- Mantener una racha de actividad resolviendo al menos una prueba de autoevaluación diaria. Las rachas prolongadas permiten obtener XP extra y desbloquear preguntas mejor calificadas.
 
 **Relaciones:** Por definir.
 
 ---
 
-### Actor: A02-Profesor
-
-**Tipo y estereotipo:** Actor primario que representa a los profesores en la plataforma.
-
-**Descripción:**  
-Los profesores pueden:
-- Validar preguntas y respuestas (para dar veracidad a las mismas)
-- Formular preguntas y respuestas en la plataforma
-- Reportar contenido inapropiado o incorrecto que incumpla con las normas de la comunidad
-
-**Relaciones:** Por definir.
-
----
-
-### Actor: A03-Administrador
+### Actor: A02-Administrador
 
 **Tipo y estereotipo:** Actor primario que representa a los administradores de la plataforma.
 
 **Descripción:**  
 Este actor puede:
-- Gestionar estudiantes y profesores
+- Gestionar colaboradores
 - Definir reglas de uso para la comunidad
 - Revisar y aprobar reportes de contenido inapropiado o incorrecto
-- Eliminar preguntas o respuestas que infrinjan las normas de la plataforma
-- Suspender a usuarios que no cumplan con las reglas
+- Eliminar preguntas que infrinjan las normas de la plataforma
+- Suspender a colaboradores que no cumplan con las reglas
 
 **Relaciones:** Por definir.
