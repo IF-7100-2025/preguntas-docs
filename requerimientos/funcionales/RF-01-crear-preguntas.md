@@ -1,14 +1,14 @@
-# Requerimiento Funcional: Crear Pregunta por Usuario
+# Requerimiento Funcional: Crear Preguntas por estudiantes
 
 ## Descripción
 
-**RF-01** Este requerimiento funcional describe la capacidad de los usuarios autenticados de la plataforma social de aprendizaje para crear y publicar preguntas relacionadas con temas específicos de diversas materias. Esta funcionalidad fomenta el aprendizaje colaborativo, permitiendo que los estudiantes contribuyan al repositorio de contenido académico mediante la formulación de preguntas que pueden ser respondidas por otros miembros de la comunidad.
+**RF-01** Este requerimiento funcional describe la capacidad de los estudiantes autenticados de la plataforma social de aprendizaje para crear y publicar preguntas relacionadas con temas específicos de diversas materias. Esta funcionalidad fomenta el aprendizaje colaborativo, permitiendo que los estudiantes contribuyan al repositorio de contenido académico mediante la formulación de preguntas que pueden ser respondidas por otros miembros de la comunidad.
 
-El alcance de este requerimiento incluye la interfaz de usuario para la creación de preguntas, el almacenamiento estructurado de las mismas, y su correcta categorización para facilitar su consulta y análisis posterior.
+El alcance de este requerimiento incluye la interfaz del estudiante para la creación de preguntas, el almacenamiento estructurado de las mismas, y su correcta categorización para facilitar su consulta y análisis posterior.
 
 ## Necesidad
 
-Actualmente, los estudiantes universitarios enfrentan desafíos al momento de repasar y reforzar conceptos clave. Esta funcionalidad aborda esa necesidad permitiendo que los usuarios generen contenido educativo en forma de preguntas, fortaleciendo el aprendizaje entre pares y ofreciendo un canal para recibir retroalimentación y aclarar dudas. Esta dinámica es coherente con el objetivo principal de la plataforma: potenciar el aprendizaje activo, colaborativo y contextualizado.
+Actualmente, los estudiantes universitarios enfrentan desafíos al momento de repasar y reforzar conceptos clave. Esta funcionalidad aborda esa necesidad permitiendo que los estudiantes generen contenido educativo en forma de preguntas, fortaleciendo el aprendizaje entre pares y ofreciendo un canal para recibir retroalimentación y aclarar dudas. Esta dinámica es coherente con el objetivo principal de la plataforma: potenciar el aprendizaje activo, colaborativo y contextualizado.
 
 ## Proceso Actual
 
