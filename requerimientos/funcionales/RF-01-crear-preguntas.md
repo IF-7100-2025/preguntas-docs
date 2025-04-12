@@ -40,7 +40,7 @@ Se propone desarrollar una funcionalidad que permita a los estudiantes autentica
 3. El sistema deberá registrar al autor de la pregunta.
 4. Las preguntas deben estar asociadas a una o varias categorías.
 5. Se debe permitir la indicación de las respuestas correctas.
-6. Se podrá incluir material adicional opcional en la pregunta.
+6. Se podrá incluir material adicional (una fotografia) de un tamaño de maximo 2 MB y es opcional adjuntarlo en la pregunta.
 
 ---
 
