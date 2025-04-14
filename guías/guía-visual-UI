@@ -1,22 +1,28 @@
-
-# Guía de Estándares de UI
-
-## Introducción
+## Guía de Estándares de UI
+### Introducción
 Esta guía define los principios, componentes y patrones de diseño para garantizar coherencia visual y funcional en las interfaces de la aplicación, manteniendo flexibilidad para escalar el sistema.
 
 
-
-## Principios Fundamentales
-1. **Consistencia**: Mantener un diseño uniforme en toda la aplicación.  
-2. **Accesibilidad**: Diseñar para todos los usuarios, incluyendo aquellos con discapacidades.  
-3. **Simplicidad**: Evitar elementos innecesarios y priorizar la claridad.  
-4. **Feedback**: Proveer retroalimentación visual y funcional en respuesta a las acciones del usuario.  
+### Principios Fundamentales:
 
 
+**Consistencia**:
+- Mantener un diseño uniforme en toda la aplicación.
 
-## Tipografía
-- **Fuente principal**: Poppins como familia principal. Jerarquía clara (h1 > h2 > h3).
-- **Escala**:
+**Accesibilidad**:
+- Diseñar para todos los usuarios, incluyendo aquellos con discapacidades. 
+
+**Simplicidad**:
+-  Evitar elementos innecesarios y priorizar la claridad. 
+
+**Feedback**:
+-  Proveer retroalimentación visual y funcional en respuesta a las acciones del usuario.  
+
+
+#### Tipografía
+**Fuente principal**: Poppins como familia principal. Jerarquía clara (h1 > h2 > h3).
+
+**Escala**:
 
         :root {
             --text-xs: 0.75rem;   /* 12px - Notas */
@@ -26,13 +32,10 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
             --text-xl: 1.5rem;    /* 24px - Títulos */
         }
 
-- **Espaciado**: 1.5 para párrafos, 1.2 para títulos.
+**Espaciado**: 1.5 para párrafos, 1.2 para títulos.
 
-
-
-## Colores
-
-### Paleta principal
+### Colores
+#### Paleta principal
 | Rol        | Hex      | Uso Típico                          |
 |------------|----------|-------------------------------------|
 | Primario   | #4361ee  | Se utiliza en botones principales y encabezados para resaltar elementos clave visuales. |
@@ -43,15 +46,12 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
 
 
 
-### Estados
+#### Estados
 | Tipo        | Hex      | Ejemplo de Uso                                                   |
 |-------------|----------|------------------------------------------------------------------|
 | Éxito       | #4cc9f0  | Se utiliza en notificaciones positivas para indicar acciones exitosas. |
 | Error       | #ef233c  | Se aplica en mensajes de error o validación para alertar al usuario. |
 | Advertencia | #f8961e  | Se emplea en alertas para señalar que se requiere precaución. |
-
-
-
 
 ## Componentes
 
@@ -71,8 +71,8 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
 
 
 **Estados**:
-- **Hover**: Oscurecer color de fondo 10%.
-- **Active**: Efecto de presión (`scale: 0.98`).
+**Hover**: Oscurecer color de fondo 10%.
+**Active**: Efecto de presión (`scale: 0.98`).
 
 ### Formularios
 **Campos de entrada**:
@@ -95,9 +95,9 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
 
 
 ## Iconografía
-- **Librería**: Font Awesome 6  
-- **Tamaños**: 16px (pequeño), 24px (estándar), 32px (grande)  
-- **Alineación**: Centrado verticalmente con texto (`vertical-align: middle`)  
+**Librería**: Font Awesome 6  
+**Tamaños**: 16px (pequeño), 24px (estándar), 32px (grande)  
+**Alineación**: Centrado verticalmente con texto (`vertical-align: middle`)  
 
 
 
@@ -118,7 +118,7 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
 
 
 ## Accesibilidad
-- **Enfoque**:  
+**Enfoque**:  
   - Contraste mínimo en texto  
   - Etiquetas `aria-label` para íconos decorativos  
   - Pruebas con Lighthouse (meta: >90 en Accessibility)  
@@ -128,9 +128,9 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
 ## Responsividad
 
 ### Puntos de quiebre
-- **Móvil**: `0-768px`  
-- **Tablet**: `769-1024px`  
-- **Escritorio**: `1025px+`  
+**Móvil**: `0-768px`  
+**Tablet**: `769-1024px`  
+**Escritorio**: `1025px+`  
 
 ### Técnicas
 - Unidades relativas (`rem`, `%`)  
