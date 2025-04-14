@@ -1,7 +1,3 @@
-# Caso de Uso: Crear Pregunta por Colaborador
-
-## Título del Caso de Uso
-Crear Pregunta por Colaborador
 
 ## Descripción
 Este caso de uso describe el proceso mediante el cual un colaborador autenticado en la plataforma puede crear y publicar una nueva pregunta de tipo selección múltiple. La funcionalidad incluye la definición del texto de la pregunta, la configuración de opciones de respuesta, la selección de la respuesta correcta, la asignación de categorías y la posibilidad de adjuntar material complementario, como imágenes.
