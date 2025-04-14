@@ -4,7 +4,7 @@
 ## Introducción
 Esta guía define los principios, componentes y patrones de diseño para garantizar coherencia visual y funcional en las interfaces de la aplicación, manteniendo flexibilidad para escalar el sistema.
 
----
+
 
 ## Principios Fundamentales
 1. **Consistencia**: Mantener un diseño uniforme en toda la aplicación.  
@@ -12,7 +12,7 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
 3. **Simplicidad**: Evitar elementos innecesarios y priorizar la claridad.  
 4. **Feedback**: Proveer retroalimentación visual y funcional en respuesta a las acciones del usuario.  
 
----
+
 
 ## Tipografía
 - **Fuente principal**: Poppins como familia principal. Jerarquía clara (h1 > h2 > h3).
@@ -28,29 +28,30 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
 
 - **Espaciado**: 1.5 para párrafos, 1.2 para títulos.
 
----
+
 
 ## Colores
 
 ### Paleta principal
+| Rol        | Hex      | Uso Típico                          |
+|------------|----------|-------------------------------------|
+| Primario   | #4361ee  | Se utiliza en botones principales y encabezados para resaltar elementos clave visuales. |
+| Secundario | #3f37c9  | Se emplea en botones secundarios para diferenciarlos del primario manteniendo coherencia. |
+| Acento     | #f72585  | Se aplica en acciones destacadas que requieren atención del usuario. |
+| Fondo      | #f5f7ff  | Se usa como fondo general de la aplicación para una apariencia clara y moderna. |
+| Texto      | #212529  | Se aplica al contenido principal para asegurar legibilidad y contraste. |
 
-| Rol        | Hex      | Uso típico                        |
-|------------|----------|-----------------------------------|
-| Primario   | #4361ee  | Botones principales, headers      |
-| Secundario | #3f37c9  | Botones secundarios               |
-| Acento     | #f72585  | Acciones destacadas               |
-| Fondo      | #f5f7ff  | Fondo de la aplicación            |
-| Texto      | #212529  | Contenido principal               |
+
 
 ### Estados
+| Tipo        | Hex      | Ejemplo de Uso                                                   |
+|-------------|----------|------------------------------------------------------------------|
+| Éxito       | #4cc9f0  | Se utiliza en notificaciones positivas para indicar acciones exitosas. |
+| Error       | #ef233c  | Se aplica en mensajes de error o validación para alertar al usuario. |
+| Advertencia | #f8961e  | Se emplea en alertas para señalar que se requiere precaución. |
 
-| Tipo        | Hex      | Ejemplo de uso               |
-|-------------|----------|------------------------------|
-| Éxito       | #4cc9f0  | Notificaciones positivas     |
-| Error       | #ef233c  | Mensajes de validación       |
-| Advertencia | #f8961e  | Alertas                      |
 
----
+
 
 ## Componentes
 
@@ -91,14 +92,14 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
 **Validación**:
 - Mensajes de error en `var(--danger)` con icono de alerta (opcional).
 
----
+
 
 ## Iconografía
 - **Librería**: Font Awesome 6  
 - **Tamaños**: 16px (pequeño), 24px (estándar), 32px (grande)  
 - **Alineación**: Centrado verticalmente con texto (`vertical-align: middle`)  
 
----
+
 
 ## Espaciado y Layout
 
@@ -114,7 +115,7 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
 - 12 columnas para escritorio  
 - 4 columnas para móvil  
 
----
+
 
 ## Accesibilidad
 - **Enfoque**:  
@@ -122,7 +123,7 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
   - Etiquetas `aria-label` para íconos decorativos  
   - Pruebas con Lighthouse (meta: >90 en Accessibility)  
 
----
+
 
 ## Responsividad
 
@@ -135,7 +136,6 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
 - Unidades relativas (`rem`, `%`)  
 - Imágenes responsivas (`max-width: 100%`)  
 
----
 
 ## Ejemplo de Implementación
 
@@ -154,7 +154,7 @@ Esta guía define los principios, componentes y patrones de diseño para garanti
     </div>
 
 
----
+
 
 ## Conclusión
 Seguir esta guía asegura una experiencia de usuario consistente y accesible. Actualiza este documento regularmente para reflejar cambios en los estándares. Para componentes no cubiertos:
