@@ -4,7 +4,7 @@
 
 El siguiente diagrama representa los componentes principales de la plataforma, incluyendo el API Gateway, el servicio de descubrimiento (Eureka) y cada microservicio con su base de datos (cuando aplica).
 
- ![Diagrama de Microservicios](Diagrama-MS.png)
+ ![Diagrama de Microservicios](Diagrama-MS2.png)
 
 ```plantuml
 @startuml
