@@ -1,22 +1,18 @@
-# Nombre del Caso de Uso
-**Generar quizzes**
+## Caso de uso: **Generar quizzes**
 
-# Código
-**CU-02**
-
-# Descripción
+## Descripción
 Este caso de uso describe el proceso mediante el cual un usuario puede generar una prueba estructurada a partir de un banco de preguntas registradas por un usuario o generadas por inteligencia artificial en la plataforma de aprendizaje colaborativo, realizar la autoevaluación y registrar el historial de resultados y calificaciones.
 
-# Actor(es)
-- Usuario Registrado (Colaborador)
-- Sistema (Plataforma de aprendizaje colaborativo)
+## Actores
+- **Primarios**: Usuario (Colaborador y Administrador)
+- **Secundarios**: Sistema 
 
-# Precondiciones
-- El usuario debe estar autenticado en el sistema.
+## Precondiciones
+1. El usuario debe estar autenticado en el sistema.
 
-# Postcondiciones
-- Se genera una prueba estructurada a partir del banco de preguntas.
-- Se almacena el historial de la prueba realizada y su calificación.
+## Postcondiciones
+1. Se genera una prueba estructurada a partir del banco de preguntas.
+2. Se almacena el historial de la prueba realizada y su calificación.
 
 # Flujo Principal
 1. El usuario accede a la sección de autoevaluaciones.
@@ -35,19 +31,19 @@ Este caso de uso describe el proceso mediante el cual un usuario puede generar u
 
 # Flujo Alternativo
 
-## A1: Error en la generación de la prueba
+### FA-01: Error en la generación de la prueba
 - En el paso 3, si no hay suficientes preguntas en el banco, el sistema notifica al usuario y da la opción de generar preguntas por cuenta propia o por medio de inteligencia artificial (5 preguntas).
 
-# Prototipos
+## Prototipos
 <img src="./imagenes/prototipo-generar-quicezz.png" width="500" height="500" />
 <img src="./imagenes/prototipo-generar-quicezz-2.png" width="500" height="500" />
 
-# Requerimientos Especiales
+## Requerimientos Especiales
 - El sistema debe validar que el texto de la pregunta no exceda los 200 caracteres.
 - El sistema debe validar que el texto de la pregunta contenga al menos 50 caracteres.
 - Cada pregunta debe tener al menos dos opciones de respuesta y una respuesta correcta seleccionada.
 
-# Escenarios de Prueba
+## Escenarios de Prueba
 
 | Escenario | Salida Esperada |
 |:---|:---|
@@ -57,9 +53,5 @@ Este caso de uso describe el proceso mediante el cual un usuario puede generar u
 | Estudiante autenticado accede a "Crear Pregunta" e intenta crear una pregunta con más de 200 caracteres. | El sistema muestra un mensaje de error indicando que excedió la cantidad de caracteres permitidos. |
 | Estudiante autenticado accede a "Crear Pregunta" e intenta crear una pregunta con menos de 50 caracteres. | El sistema muestra un mensaje de error indicando que la cantidad de caracteres ingresados es insuficiente. |
 
-# Requerimientos Asociados
-- **RF-02**: Generar quizzes
----
-
-**Documento Preparado Por:** Kendall Sánchez Chinchilla & Jaziel Rojas Serrano  
+**Documento Preparado Por:** Kendall Sánchez & Jaziel Rojas  
 **Fecha:** 2025-04-12
