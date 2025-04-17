@@ -1,4 +1,4 @@
-# Caso de Uso: Registro de Colaborador en la plataforma. [RF-06]**
+# Caso de Uso: Registrar Colaborador [RF-06]**
 
 ## Descripción
 El presente caso de uso describe el proceso mediante el cual un nuevo colaborador puede crear una cuenta personal en la plataforma social de aprendizaje colaborativo, proporcionando datos básicos como nombre de usuario, correo electrónico y contraseña. Incluye validaciones de formato y seguridad, así como el envío opcional de un correo de confirmación.
