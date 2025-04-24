@@ -22,15 +22,17 @@ Este caso de uso describe el proceso mediante el cual un usuario autenticado de 
 
 1. El colaborador accede a la plataforma y se autentica exitosamente.
 
-2. El sistema muestra la lista de preguntas hechas por otros colaboradores.
+2. El colaborador ingresa a un quiz.
 
-3. El sistema muestra los detalles de la pregunta junto con la opción de calificarla (like o dislike).
+3. El colaborador contesta la pregunta.
 
-4. El colaborador selecciona una opción de calificación.
+4. El sistema muestra los detalles de la pregunta junto con la opción de calificarla (like o dislike).
 
-5. El sistema registra la calificación del colaborador.
+5. El colaborador selecciona una opción de calificación.
 
-6. El sistema confirma visualmente que la calificación fue registrada (enfatizando el icono de like o dislike según lo seleccionado por el colaborador)
+6. El sistema registra la calificación del colaborador.
+
+7. El sistema confirma visualmente que la calificación fue registrada (enfatizando el icono de like o dislike según lo seleccionado por el colaborador)
 
 ## Flujos Alternativos
 
