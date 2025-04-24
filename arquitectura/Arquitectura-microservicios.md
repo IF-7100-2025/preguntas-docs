@@ -4,7 +4,7 @@
 
 El siguiente diagrama representa los componentes principales de la plataforma, incluyendo el API Gateway, el servicio de descubrimiento (Eureka) y cada microservicio con su base de datos (cuando aplica).
 
- ![Diagrama de Microservicios](Diagrama-MS.png)
+ ![Diagrama de Microservicios](Diagrama-MS2.png)
 
 ```plantuml
 @startuml
@@ -41,6 +41,7 @@ database "DB Question" as DBQuestion
 database "DB Test" as DBTest
 database "DB Contributor" as DBContributor
 database "DB Admin" as DBAdmin
+database "DB AI" as DBAI
 
 ' Conexiones desde el usuario
 Frontend --> Gateway : Solicitudes HTTP
@@ -62,12 +63,16 @@ Contributor --> Eureka
 Admin --> Eureka
 Gateway --> Eureka
 
+
+
+
 ' Conexiones a base de datos
 Auth --> DBAuth
 Question --> DBQuestion
 Test --> DBTest
 Contributor --> DBContributor
 Admin --> DBAdmin
+AI --> DBAI
 
 @enduml
 
