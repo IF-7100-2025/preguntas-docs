@@ -13,6 +13,8 @@ Este caso de uso describe el proceso mediante el cual un usuario autenticado de 
 
 1. El colaborador debe estar autenticado en la plataforma.  
 2. La pregunta debe estar publicada y visible.
+3. La colaborador debe estar completando un quiz.
+
 
 ## Postcondiciones
 
@@ -24,7 +26,7 @@ Este caso de uso describe el proceso mediante el cual un usuario autenticado de 
 
 2. El colaborador ingresa a un quiz.
 
-3. El colaborador contesta la pregunta.
+3. El colaborador contesta alguna pregunta.
 
 4. El sistema muestra los detalles de la pregunta junto con la opción de calificarla (like o dislike).
 
