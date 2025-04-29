@@ -9,6 +9,7 @@ Este caso de uso describe el proceso mediante el cual un colaborador autenticado
 ## Precondiciones
 1. El colaborador debe estar autenticado en la plataforma.
 2. El colaborador debe tener permisos para crear preguntas.
+3. El colaborador debe estar completando un quiz.
 
 ## Postcondiciones
 1. La pregunta ha sido guardada en la base de datos de la plataforma.
