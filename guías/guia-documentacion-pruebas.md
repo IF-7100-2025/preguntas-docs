@@ -8,9 +8,9 @@
 
 * **Objetivo:** Validar el comportamiento de las unidades individuales de código, como métodos y funciones.
 
-* **Herramientas:** JUnit.
+* **Herramientas:** Mockito.
 
-* **Alcance:** Cada método o función del código será probado en aislamiento, utilizando entradas conocidas y verificando que la salida sea la esperada.
+* **Alcance:** Cada método o función del código será probado en aislamiento, utilizando entradas conocidas y verificando que la salida sea la esperada. Las dependencias externas serán simuladas utilizando Mockito para garantizar que las pruebas se realicen sin afectar a otros componentes del sistema.
 
 #### **Pruebas de Integración**
 
@@ -19,6 +19,20 @@
 * **Herramientas:** Spring Boot Test, MockMvc.
 
 * **Alcance:** Se probarán las interacciones entre los componentes del sistema, como la comunicación entre el frontend y el backend, la integración con la base de datos, etc.
+
+### 🛠️ Herramientas
+
+**Spring Boot Test** 
+
+    Es una herramienta de Spring que proporciona soporte completo para realizar pruebas de aplicaciones basadas en Spring Boot. Permite realizar pruebas tanto unitarias como de integración, simulando un entorno de aplicación completo sin necesidad de desplegar un servidor real. Utiliza anotaciones como @SpringBootTest para cargar el contexto completo de la aplicación durante las pruebas.
+
+**MockMvc** 
+
+    Es una herramienta de Spring utilizada para realizar pruebas de controladores en aplicaciones Spring MVC. Permite simular solicitudes HTTP y verificar las respuestas, como los códigos de estado y el contenido de la respuesta, sin necesidad de levantar un servidor real. Es ideal para probar el comportamiento de los controladores sin necesidad de ejecutar toda la aplicación.
+
+**Mockito** 
+
+    Es un marco de pruebas que permite simular objetos (mocks) en las pruebas unitarias. Se utiliza principalmente para aislar las unidades de código y evitar dependencias externas como bases de datos o servicios. Con Mockito, puedes simular el comportamiento de las clases y objetos utilizados por el código en prueba, controlando su comportamiento y verificando las interacciones entre ellos.
 
 # **Escenarios de Pruebas según las Historias de Usuario**
 
