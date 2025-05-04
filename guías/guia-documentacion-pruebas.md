@@ -104,19 +104,16 @@ Para poder realizar pruebas unitarias utilizando **Mockito** y **JUnit** en un p
 
         dependencies {
 
-          // Dependencia de JUnit 5 para las pruebas unitarias
+        // Dependencia de JUnit 5 para las pruebas unitarias
+        testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
 
-          testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+        testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.0")
 
-          testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+        // Dependencia de Mockito para simular objetos (mocks)
+        testImplementation("org.mockito:mockito-core:4.0.0")
 
-          // Dependencia de Mockito para simular objetos (mocks)
-
-          testImplementation 'org.mockito:mockito-core:4.0.0'
-
-          // Para usar las anotaciones de JUnit y Mockito
-
-          testImplementation 'org.mockito:mockito-junit-jupiter:4.0.0'
+        // Para usar las anotaciones de JUnit y Mockito
+        testImplementation("org.mockito:mockito-junit-jupiter:4.0.0")
 
         }
 
@@ -129,10 +126,9 @@ Para poder realizar pruebas unitarias utilizando **Mockito** y **JUnit** en un p
 
 3. En la sección `test` de tu `build.gradle`, asegúrate de tener esto para que Gradle reconozca que usarás JUnit 5:
 
-        test {
-
-          useJUnitPlatform() // Indica que se usará JUnit 5
-
+        
+        tasks.withType<Test> {
+          useJUnitPlatform()
         }
 
 ### **Paso 2: Crear un Mock y Realizar una Prueba Unitaria**
@@ -193,34 +189,23 @@ Esto ejecutará todas las pruebas en tu proyecto, incluyendo las pruebas unitari
 
 ### **Paso 1: Configurar las Dependencias para las Pruebas de Integración**
 
-En un proyecto de **Gradle** que utiliza **Spring Boot**, necesitas agregar las dependencias necesarias para realizar pruebas de integración. Estas dependencias permiten que puedas probar toda la aplicación en un entorno controlado, simulando la interacción entre los componentes del sistema.
+En un proyecto de **Gradle** que utiliza **Spring Boot**, necesitas agregar las dependencias necesarias para realizar pruebas de integración. Estas dependencias permiten que puedas probar toda la aplicación en un entorno controlado, simulando la interacción entre los componentes del sistema. Este tipo de pruebas solo se harán si es necesario o si sobra tiempo.
 
 #### **Incluir las dependencias en Gradle:**
 
 1. Abre el archivo `build.gradle.kts`.
 
-2. Asegúrate de agregar las siguientes dependencias en la sección `dependencies`:
+2. Asegúrate de agregar las siguientes dependencias (si no existen) en la sección `dependencies`:
 
           dependencies {
+
         // Dependencia de Spring Boot Test para realizar pruebas de integración
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
-
-        // Dependencia de JUnit 5 (si aún no la has agregado)
-        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-        testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-
-
-        // Dependencia de Mockito (si es necesario para la integración con mocks)
-        testImplementation 'org.mockito:mockito-core:4.0.0'
-      }
+        testImplementation("org.springframework.boot:spring-boot-starter-test")
+        }
 
 * **`spring-boot-starter-test`**: Proporciona todas las herramientas necesarias para realizar pruebas en aplicaciones basadas en Spring Boot, como `@SpringBootTest`, `@AutoConfigureMockMvc`, entre otras.
 
-* **JUnit 5**: Asegúrate de tener configurada la dependencia de **JUnit 5** para organizar y ejecutar las pruebas.
-
-* **Mockito**: Si necesitas crear mocks de componentes en las pruebas de integración, añade **Mockito** como en el caso de las pruebas unitarias.
-
+**Nota:** La mayoría de dependencias que usamos en las pruebas unitarias son las mismas que se utilizan en las pruebas de integración, por lo que no hace falta vovler a añadirlas.
 
 ### **Paso 2: Escribir una Prueba de Integración con Spring Boot Test**
 
@@ -300,7 +285,7 @@ Para trabajar con **Gherkin** sin **Cucumber**, simplemente necesitas agregar la
           dependencies {
 
         // Dependencia de Gherkin para trabajar con archivos .feature
-        testImplementation 'io.cucumber:gherkin:20.1.0'
+        testImplementation("io.cucumber:gherkin:20.1.0")
         
         }
 
@@ -329,7 +314,6 @@ Para trabajar con **Gherkin** sin **Cucumber**, simplemente necesitas agregar la
 
         Then el sistema debería registrar al usuario y enviar un correo de verificación
 
-        
 
         Scenario: Registro con correo duplicado
 
