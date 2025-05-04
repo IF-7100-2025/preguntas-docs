@@ -221,7 +221,6 @@ En un proyecto de **Gradle** que utiliza **Spring Boot**, necesitas agregar las 
 
 * **Mockito**: Si necesitas crear mocks de componentes en las pruebas de integración, añade **Mockito** como en el caso de las pruebas unitarias.
 
-3. En la sección `test` de tu archivo `build.gradle`, agrega lo siguiente para usar JUnit 5 en las pruebas de integración:
 
 ### **Paso 2: Escribir una Prueba de Integración con Spring Boot Test**
 
@@ -306,7 +305,9 @@ Para trabajar con **Gherkin** sin **Cucumber**, simplemente necesitas agregar la
         }
 
      
-   Con esta dependencia, puedes trabajar con **archivos `.feature`** y escribir los escenarios de prueba utilizando la sintaxis de **Gherkin**, sin necesidad de integrar Cucumber para la ejecución automática de las pruebas.**Paso 2: Estructura de Archivos y Creación de Archivos .feature**  
+   Con esta dependencia, puedes trabajar con **archivos `.feature`** y escribir los escenarios de prueba utilizando la sintaxis de **Gherkin**, sin necesidad de integrar Cucumber para la ejecución automática de las pruebas.
+   
+### **Paso 2: Estructura de Archivos y Creación de Archivos .feature**  
 1. **Crea una carpeta para los archivos `.feature`**:
 
    * En tu proyecto, dentro de la carpeta `src/test/resources`, crea una carpeta llamada **`features`**. Aquí es donde colocarás todos los archivos `.feature` que describen los escenarios de prueba.
