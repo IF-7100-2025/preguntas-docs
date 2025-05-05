@@ -35,8 +35,7 @@ Este caso de uso describe el proceso mediante el cual un usuario puede generar u
 - En el paso 3, si no hay suficientes preguntas en el banco, el sistema notifica al usuario y da la opción de generar preguntas por cuenta propia o por medio de inteligencia artificial (5 preguntas).
 
 ## Prototipos
-<img src="./imagenes/prototipo-generar-quicezz.png" width="500" height="500" />
-<img src="./imagenes/prototipo-generar-quicezz-2.png" width="500" height="500" />
+![Prototipo generar quices en la plataforma](imagenes/prototipo-generar-quicezz-act.png)
 
 ## Requerimientos Especiales
 - El sistema debe validar que el texto de la pregunta no exceda los 200 caracteres.
