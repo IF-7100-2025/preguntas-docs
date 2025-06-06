@@ -42,7 +42,7 @@ Este caso de uso describe el proceso mediante el cual un colaborador autenticado
    - El sistema muestra un mensaje de error indicando un problema de acceso o disponibilidad.
 
 ## Prototipos
-![Prototipo generar quices en la plataforma](imagenes/prototipo-generar-quicezz-act.png)
+![Prototipo generar quices en la plataforma](imagenes/prototipo-generar-quiz.png)
 
 ## Requerimientos Especiales  
 - El sistema debe validar dinámicamente la cantidad de preguntas disponibles por tipo de quiz.  
