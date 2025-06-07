@@ -41,7 +41,7 @@ Este caso de uso describe el proceso mediante el cual un colaborador puede respo
 
 
 ## Prototipos
-![Prototipo generar quices en la plataforma](imagenes/prototipo-generar-quiz.png)
+![Prototipo generar quices en la plataforma](imagenes/prototipo-resolver-quizz.png)
 
 
 ## Escenarios de Prueba
