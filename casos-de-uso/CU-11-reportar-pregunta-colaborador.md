@@ -22,14 +22,20 @@ Este caso de uso describe cómo un colaborador puede reportar una pregunta mient
 ## Flujo Principal
 
 1. El colaborador accede a un quiz en curso desde la sección “Historial de Tests” o al iniciar uno nuevo.
-2. El sistema presenta las preguntas con sus opciones de respuesta y un botón con ícono para "Reportar".
+2. El sistema presenta las preguntas con sus opciones de respuesta y un botón con ícono para "Reportar"(Una banderita roja).
 3. El colaborador identifica una pregunta que considera inapropiada y presiona el botón con ícono de "Reportar".
 4. El sistema despliega un formulario emergente (modal) con una lista de razones de reporte.
 5. El colaborador selecciona una razón (ej.: contenido inapropiado, confusa, mal redactada, otra).
+    - En caso de seleccionar otra opción se le abre un espacio para especificar cual.
+    - Este apartado tiene una extensión máxima de 20 caracteres.
+    - En la sección de comentarios adicionales, la cual es opcional la extensión máxima es de 400 caracteres. 
 6. El colaborador envía el reporte.
 7. El sistema valida que el límite diario no se haya alcanzado.
-9. El sistema registra el reporte asociado a la pregunta y muestra una notificación confirmando el envío.
-10. El colaborador puede continuar resolviendo el quiz normalmente.
+    - El límite diario por colaborador es de 10 reportes.
+    - El colaborador puede hacer un solo reporte por cada pregunta. 
+    - Una vez que haga el reporte esa pregunta deja de contar en el quiz, no se le suma o resta puntos. 
+8. El sistema registra el reporte asociado a la pregunta y muestra una notificación confirmando el envío.
+9. El colaborador puede continuar resolviendo el quiz normalmente.
 
 ## Flujo Alternativo
 ### FA-01: El colaborador intenta enviar un reporte sin razón seleccionada
