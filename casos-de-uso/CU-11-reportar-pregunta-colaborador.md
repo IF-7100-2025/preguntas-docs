@@ -33,8 +33,8 @@ Este caso de uso describe cómo un colaborador puede reportar una pregunta mient
 7. El sistema valida que el límite diario no se haya alcanzado.
     - El límite diario por colaborador es de 10 reportes.
     - El colaborador puede hacer un solo reporte por cada pregunta. 
-    - Una vez que haga el reporte esa pregunta deja de contar en el quiz, no se le suma o resta puntos. 
-8. El sistema registra el reporte asociado a la pregunta y muestra una notificación confirmando el envío.
+    - Una vez que se realiza el reporte, la pregunta deja de ser considerada para el cálculo del puntaje del quiz, es decir, no suma ni resta puntos independientemente de si la respuesta fue correcta o incorrecta.
+8. El sistema registra el reporte asociado a la pregunta y muestra una notificación en pantalla confirmando que el reporte ha sido enviado exitosamente.
 9. El colaborador puede continuar resolviendo el quiz normalmente.
 
 ## Flujo Alternativo
