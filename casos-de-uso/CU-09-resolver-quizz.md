@@ -10,7 +10,7 @@ Este caso de uso describe el proceso mediante el cual un colaborador puede respo
 ## Precondiciones
 
 1. El colaborador debe estar autenticado en el sistema.
-2. El colaborador debe haber generado el quiz previamente o tenerlo en curso.
+2. El colaborador debe haber generado el quiz.
 
 
 ## Postcondiciones
@@ -20,24 +20,23 @@ Este caso de uso describe el proceso mediante el cual un colaborador puede respo
 
 ## Flujo Principal
 
-1. El colaborador accede a la sección de “Historial Test” y selecciona un quiz pendiente para continuar o completar.
-2. El sistema presenta todas las preguntas del quiz en una sola vista, permitiendo responderlas en cualquier orden.
-3. El sistema guarda automáticamente las respuestas a medida que el colaborador las marca.
-4. El colaborador puede abandonar y retomar el quiz más tarde sin perder el progreso.
-5. Una vez respondidas todas las preguntas (o al decidir finalizar), el colaborador envía el quiz para su evaluación.
-6. El sistema corrige automáticamente las respuestas.
-7. El sistema calcula y muestra al colaborador:
+
+1. El sistema presenta todas las preguntas del quiz en una sola vista, permitiendo responderlas en cualquier orden.
+2. El sistema guarda automáticamente las respuestas a medida que el colaborador las marca.
+3. Una vez respondidas todas las preguntas (o al decidir finalizar), el colaborador envía el quiz para su evaluación.
+4. El sistema corrige automáticamente las respuestas.
+5. El sistema calcula y muestra al colaborador:
     - Puntaje total obtenido.
     - Preguntas correctas e incorrectas.
     - Retroalimentación general.
-8. El sistema actualiza la XP del colaborador según el puntaje.
-9. El sistema evalúa si debe cambiar el rango del colaborador.
-10. El sistema actualiza la racha si no había otro quiz completado ese día.
+6. El sistema actualiza la XP del colaborador según el puntaje.
+7. El sistema evalúa si debe cambiar el rango del colaborador.
+8. El sistema actualiza la racha si no había otro quiz completado ese día.
 
 ## Flujo Alternativo
 ### FA-01: El colaborador cierra sesión o se desconecta antes de terminar
-- El sistema guarda automáticamente el estado del quiz y las respuestas marcadas hasta ese momento.
-- Al volver a ingresar, el colaborador puede retomar el quiz desde donde lo dejó.
+- El sistema no guarda automáticamente el estado del quiz ni las respuestas marcadas hasta ese momento.
+
 
 
 ## Prototipos

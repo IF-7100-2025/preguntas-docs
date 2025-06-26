@@ -12,7 +12,8 @@ El presente caso de uso describe el proceso mediante el cual un nuevo colaborado
 
 ## Postcondiciones
 - La cuenta del colaborador queda registrada en el sistema.
-- El colaborador puede iniciar sesión en la plataforma una vez registrado, y opcionalmente el colaborador recibe un correo de confirmación.
+- El colaborador debe verificar su cuenta mediante correo electrónico. 
+- El colaborador puede iniciar sesión en la plataforma una vez registrado y verificado.
 
 ## Flujo Principal
 1. El Colaborador accede a la sección de "Registrarse".

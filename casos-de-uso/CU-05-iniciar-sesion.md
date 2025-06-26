@@ -8,7 +8,7 @@ Este caso de uso describe el proceso mediante el cual un usuario registrado de l
 - **Secundarios**: Sistema
 
 ## Precondiciones
-- El usuario debe estar registrado en la plataforma.
+- El usuario debe estar registrado y verificado en la plataforma.
 - El usuario debe conocer su nombre de usuario y contraseña.
 - El sistema debe contar con una base de datos con los usuarios registrados y sus credenciales almacenadas de manera segura.
 

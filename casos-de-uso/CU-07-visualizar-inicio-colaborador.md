@@ -19,11 +19,11 @@ El presente caso de uso describe la interacción de un colaborador autenticado c
 1. El Colaborador accede a la página principal de la plataforma después de iniciar sesión.
 2. El Sistema muestra la página principal con un menú lateral en la izquierda y una sección principal a la derecha.
 3. El Sistema muestra en el menú lateral las siguientes opciones:
-    * Información Personal (elemento interactivo)
+    * Página de inicio
     * Crear Quiz
     * Crear Pregunta
-    * Historial de Quizzes
     * Mis Preguntas
+    * Información Personal (elemento interactivo)
 4. El Sistema muestra en la parte superior del menú lateral el texto "Usuario".
 5. El Colaborador visualiza en la sección principal una lista de unas pocas categorías de estudio aleatorias.
 6. El Colaborador visualiza en la sección principal un campo de entrada de texto para buscar categorías.

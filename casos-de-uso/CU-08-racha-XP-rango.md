@@ -20,9 +20,7 @@ Este caso de uso describe cómo un **colaborador** autenticado puede acumular ex
 ## Flujo Principal
 1. El Colaborador realiza una acción en la plataforma que otorga XP:
    - Publicar una pregunta (**10 XP**)
-   - Comentar un quiz con al menos 5 preguntas (**20 XP**)
-   - Comentar un quiz con más de 5 preguntas (**50 XP**)
-   - Resolver un quiz (**XP configurable** por número de preguntas/respuestas correctas)
+   - Resolver un quiz (**50 XP**)
 2. El Sistema registra la actividad con sello de tiempo.
 3. El Sistema verifica si hubo actividad el día anterior:
    - Si **sí**, incrementa la racha diaria.
