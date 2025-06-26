@@ -1,4 +1,4 @@
-## Título del Caso de Uso: **Sistema de Racha Diaria, XP y Rangos**
+# Caso de Uso: Sistema de Racha Diaria, XP y Rangos
 
 ## Descripción
 Este caso de uso describe cómo un **colaborador** autenticado puede acumular experiencia (XP) y mantener una racha diaria al participar activamente en la plataforma (por ejemplo, resolviendo quizzes, comentando y creando preguntas), con el fin de fomentar el aprendizaje continuo y permitir la progresión a través de distintos rangos: **Aprendiz → Pensador → Sabio**.
@@ -20,9 +20,7 @@ Este caso de uso describe cómo un **colaborador** autenticado puede acumular ex
 ## Flujo Principal
 1. El Colaborador realiza una acción en la plataforma que otorga XP:
    - Publicar una pregunta (**10 XP**)
-   - Comentar un quiz con al menos 5 preguntas (**20 XP**)
-   - Comentar un quiz con más de 5 preguntas (**50 XP**)
-   - Resolver un quiz (**XP configurable** por número de preguntas/respuestas correctas)
+   - Resolver un quiz (**50 XP**)
 2. El Sistema registra la actividad con sello de tiempo.
 3. El Sistema verifica si hubo actividad el día anterior:
    - Si **sí**, incrementa la racha diaria.
