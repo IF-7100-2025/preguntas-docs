@@ -131,7 +131,7 @@ echo " Todos los servicios están corriendo en segundo plano"
 echo "Usa 'pkill -f bootRun' para detenerlos todos"
 ```
 
-> ⚠️ Asegurate de tener ejecutarlos desde una consola GitBash.
+> ⚠️ Asegurate de ejecutarlos desde una consola GitBash.
 
 ---
 
@@ -172,7 +172,6 @@ docker-compose -f compose-base.yml up -d
 - Los microservicios **se ejecutan desde el código fuente**, ya sea:
 
   - En el IDE (ej. IntelliJ IDEA)
-  - Usando el script `./run-all.sh`
 
 ---
 
@@ -507,7 +506,6 @@ docker run bulan506/gateway:1.0
 
 ## Notas Finales
 
-- Usá application-docker.yml para entorno en contenedores.
 - application-secret.yml, email-credentials.yml y otros **no deben subirse a Git**.
 
 ---
