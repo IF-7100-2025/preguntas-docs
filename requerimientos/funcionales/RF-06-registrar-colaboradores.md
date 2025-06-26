@@ -14,7 +14,7 @@ Se propone implementar una funcionalidad que permita a los nuevos colaboradores 
 - **Formulario de Registro de Colaborador:** Una interfaz que recoja los datos requeridos para el registro: nombre de usuario, correo electrónico y contraseña.  
 - **Validación de Formato de Correo:** El sistema deberá verificar que el correo ingresado tenga un formato válido (por ejemplo, que contenga “@” y “.com “).  
 - **Validación de Seguridad de Contraseña:** Se establecerán criterios mínimos (al menos 8 caracteres, mayúsculas, minúsculas y un número) para garantizar contraseñas seguras.  
-- **Confirmación de Registro (opcional):** Tras completar el registro, el colaborador debe recibir un correo de confirmación que valide su correo y le permita iniciar sesión en la plataforma.  
+- **Confirmación de Registro:** Tras completar el registro, el colaborador debe recibir un correo de confirmación que valide su correo y le permita iniciar sesión en la plataforma.  
 - **Almacenamiento Seguro de Credenciales:** Las contraseñas deberán almacenarse en la base de datos usando un algoritmo de cifrado (hash).
 
 ## Documentos de Referencia  
