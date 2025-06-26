@@ -74,79 +74,9 @@ Antes de ejecutar cualquier entorno, asegurate de cumplir con lo siguiente:
 
 ---
 
-## 🖥️ Opción 1: Desarrollo Local usando Gradle (sin IDE)
+### Opción 1: 🧪 Entorno de Desarrollo Asistido con Docker e IntelliJ (desarrollo)
 
-Esta opción permite correr todos los microservicios manualmente desde consola, **sin abrir el IDE**, ejecutando directamente los servicios con `./gradlew bootRun`.
-
-Ideal para entornos de desarrollo donde:
-
-- Ya tenés las bases de datos en **pgAdmin**
-- Los secretos están configurados localmente
-- No necesitás contenedores, solo los servicios como procesos
-- Pero necesitan levantar **infraestructura auxiliar** como Kafka, Redis, Zookeeper
-
-#### Comando
-
-```bash
-docker-compose -f compose-base.yml up -d
-```
-
-- Levantara **infraestructura auxiliar** como Kafka, Redis, Zookeeper.
-
----
-
-### ▶️ Ejecutar el script
-
-Desde la raíz del proyecto, corré:
-
-```bash
-./run-all.sh
-```
-
-Este script abrirá cada servicio en segundo plano.
-
----
-
-### 📄 Archivo: `run-all.sh`
-
-```bash
-#!/bin/bash
-
-services=(
-  "eureka"
-  "gateway"
-  "authentication-service"
-  "question-service"
-  "ia-service"
-  "email-service"
-)
-
-for service in "${services[@]}"; do
-  echo "🚀 Iniciando $service..."
-  cd "$service" && ./gradlew bootRun &
-  cd ..
-done
-
-echo " Todos los servicios están corriendo en segundo plano"
-echo "Usa 'pkill -f bootRun' para detenerlos todos"
-```
-
-> ⚠️ Asegurate de ejecutarlos desde una consola GitBash.
-
----
-
-### 🔍 Verificación
-
-Una vez corriendo:
-
-- ✅ Eureka Dashboard: [http://localhost:8761](http://localhost:8761)
-- ✅ API Gateway: [http://localhost:8080](http://localhost:8080)
-
----
-
-### Opción 2: 🧪 Entorno de Desarrollo Asistido con Docker e IntelliJ (desarrollo)
-
-Esta opción está pensada para desarrollar (dev) para ejecutar los microservicios manualmente (desde el IDE o usando `./run-all.sh`) pero necesitan levantar **infraestructura auxiliar** como Kafka, Redis, Zookeeper y las bases de datos de `auth_db`, `questions_db`, `ia_db`.
+Esta opción está pensada para desarrollar (dev) para ejecutar los microservicios manualmente (desde el IDE ) pero necesitan levantar **infraestructura auxiliar** como Kafka, Redis, Zookeeper y las bases de datos de `auth_db`, `questions_db`, `ia_db`.
 
 ---
 
@@ -169,7 +99,7 @@ docker-compose -f compose-base.yml up -d
 #### 🗃️ Dependencias externas
 
 - Las bases de datos `auth_db`, `questions_db`, `ia_db` **se ejecutan desde el entorno de desarrollo en PGAdmin 4** (no en contenedores).
-- Los microservicios **se ejecutan desde el código fuente**, ya sea:
+- Los microservicios **se ejecutan desde el código fuente**:
 
   - En el IDE (ej. IntelliJ IDEA)
 
@@ -193,7 +123,7 @@ docker-compose -f compose-base.yml up -d
 
 Una vez levantados Redis, Kafka y Zookeeper:
 
-1. Ejecutá los servicios desde el IDE (recomanderdado)
+1. Ejecutá los servicios desde el IDE (recomendado)
 2. Accedé a:
 
    - **Eureka**: [http://localhost:8761](http://localhost:8761)
@@ -201,7 +131,7 @@ Una vez levantados Redis, Kafka y Zookeeper:
 
 ---
 
-### Opción 3: ⚙️ Entorno de Preproducción (Imágenes locales + variables + perfil docker)
+### Opción 2: ⚙️ Entorno de Preproducción (Imágenes locales + variables + perfil docker)
 
 Este entorno simula un despliegue más cercano a producción, pero **construyendo las imágenes localmente**. Se usa para validar el correcto funcionamiento **antes de publicar las imágenes a Docker Hub**.
 
@@ -268,7 +198,7 @@ Este entorno **sí requiere**:
 
 ---
 
-## 🚢 Opción 4: Producción con Imágenes desde Docker Hub
+## 🚢 Opción 3: Producción con Imágenes desde Docker Hub
 
 Esta opción representa el **despliegue en producción real**, utilizando las **imágenes ya construidas y publicadas** en una cuenta de Docker Hub.
 
@@ -499,7 +429,6 @@ docker run bulan506/gateway:1.0
 | compose-base.yml            | Servicios comunes (Kafka, Redis)      |
 | docker-compose.yml          | Despliegue local (Simulacion)         |
 | docker-compose.prod.yml     | Despliegue con imágenes en producción |
-| run-all.sh                  | Arranque local con bootRun            |
 | .github/workflows/ci-cd.yml | Pipeline de CI/CD                     |
 
 ---
