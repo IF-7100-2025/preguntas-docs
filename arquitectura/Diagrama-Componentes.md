@@ -6,7 +6,7 @@ Este diagrama representa la arquitectura interna del contenedor `API de Pregunta
 
 ## Diagrama
 
-![Diagrama de Componentes - Sistema de Preguntas](diagrama-componentes.png)
+![Diagrama de Componentes - Sistema de Preguntas](Img/diagrama-componentes.png)
 
 
 ## Notas
