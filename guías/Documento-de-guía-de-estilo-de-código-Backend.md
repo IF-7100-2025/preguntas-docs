@@ -13,6 +13,13 @@
 * Paquetes: ucr.ac.cr.nombreDelProyecto.paquete
 
 ## 2. División de Capas
+Utilizaremos el patrón arquitectónico CQRS (Command Query Responsibility Segregation) que separa claramente las operaciones de escritura (Commands) de las de lectura (Queries), mejorando la escalabilidad, claridad y organización del código. En el contexto del problema se implementará porque:
+
+- Permite desacoplar la lógica de negocio entre lo que modifica el estado del sistema y lo que consulta información.
+
+- Facilita la validación específica por cada tipo de operación.
+
+- Mejora el mantenimiento del código y la incorporación de nuevas funcionalidades
 
 ```
 src/
