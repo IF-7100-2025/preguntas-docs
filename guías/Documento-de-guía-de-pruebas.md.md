@@ -157,6 +157,13 @@ Una vez configurado **JUnit** y **Mockito**, puedes escribir tus pruebas unitari
       }
     }
 
+En caso de que se realicen varios test en una sola clase la creación del mock debe hacerse por medio de:
+
+`@BeforeEach
+    void setUp() {
+}`
+
+Para que el escenario base pueda ser compartido entre los diferentes test.
 
 **Explicación**:
 
@@ -178,14 +185,14 @@ Esto ejecutará todas las pruebas en tu proyecto, incluyendo las pruebas unitari
 
 ## **Porcentaje de cobertura en las pruebas**
 
-Para que las pruebas unitarias se busca que las mismas se consideren satisfactorias y cumplan con los estándares del proyecto,
-por ello se requiere alcanzar una cobertura mínima del 80% en los componentes handlers de cada microservicio.
-Este nivel de cobertura permite garantiza que la lógica de negocio se valide de forma adecuada,
+Para que las pruebas unitarias se consideren satisfactorias y cumplan con los estándares del proyecto, 
+se requiere alcanzar una cobertura mínima del 80% en los componentes handlers de cada microservicio.
+Este nivel de cobertura garantiza que la lógica de negocio se valide de forma adecuada,
 así como la existencia de un código funcional, confiable y mantenible.
 
 ## **Funcionalidades cubiertas por medio de las pruebas**
 
-Para el proyecto se decidió que las pruebas estuvieran enfocadas en cubrir las historias de usuario desarrolladas
+Para el proyecto se decidió que las pruebas unitarias estuvieran enfocadas en cubrir las historias de usuario desarrolladas
 a lo largo del sprint, estas historias de usuario son las siguientes:
 
 - US01 Registrar preguntas
@@ -238,10 +245,11 @@ Una vez ejecutados los test de manera exitosa el reporte se maneja de manera din
 
 ## **Microservicios probados**
 
-Dado que se decidió probar la lógica de negocio, los servicios que contienen pruebas son los servicios de ia, el servicio de preguntas
-y el servicio de autentificación, sin embargo, el servicio de autentificación tiene sus pruebas ejecutadas de manera automática debido
-a la limitante de que se encuentra construído con la versión de gradle 8.4, la cual no posee la facilidad de ejecutar las mismas por medio
-del wrapper con el comando ./gradlew test.
+Dado que se decidió probar la lógica de negocio, los servicios que contienen pruebas son los servicios de: ia, preguntas y 
+el servicio de autentificación, sin embargo, el servicio de autentificación no tiene sus pruebas ejecutadas de manera automática debido
+a la limitante de que el mismo se encuentra construído con la versión de gradle 8.4, la cual no posee la facilidad de ejecutar las mismas por medio
+del wrapper con el comando ./gradlew test. En cuanto a los servicios de Eureka, Gateway y Email los mismos no fueron probados al estar mayórmente enfocados 
+a proveer servicios y configuración del entorno.
 
 ***
 
@@ -266,8 +274,8 @@ Para realizar pruebas manuales primero se deben comprobar 2 aspectos:
 
 **Revisión del Caso de Uso**
 
-Por medio de las pruebas manuales se busca que las cartas definidas cumplas con los criterios de aceptación que poseen:
-Para ello se contemplan 3 escenarios:
+Por medio de las pruebas manuales se busca que las cartas definidas cumplan con los criterios de aceptación que poseen:
+Para ello se contemplan 2 escenarios:
 
 - a. El flujo ideal o normal de operación.
 - b. Escenarios concretos a validar, en este caso las cartas definidas.
@@ -290,7 +298,7 @@ Definir el cuerpo de la solicitud en caso de que se requiera.
 
 Agregar el token con la sesion iniciada.
 
-Envía la solicitud desde Postman.
+Envíar la solicitud desde Postman.
 
 Verificar el código de respuesta y el contenido.
 
@@ -298,6 +306,6 @@ Verificar que el mensaje obtenido en la respuesta sea satisfactorio
 
 **Cobertura de pruebas manuales**
 
-Al igual que las pruebas unitarias cada prueba manual debe validar una funcionalidad
+Al igual que las pruebas unitarias cada prueba manual debe validar una funcionalidad,
 en este caso cada una debe estar ligada a una carta que se debe haber completado de manera
 satisfactoria por medio de sus criterios de aceptación.
