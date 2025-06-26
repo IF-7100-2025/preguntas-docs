@@ -9,9 +9,7 @@ El colaborador es un usuario que interactúa activamente con la plataforma y pue
 
 - Formular preguntas, agregarles material adicional (imágenes) y seleccionar categorías para cada una (máximo 3)
 - Realizar pruebas de autoevaluación de las categorías de su preferencia 
-- Calificar preguntas y respuestas (dando pulgar arriba)
 - Recibir sugerencias de temas que necesita reforzar de acuerdo a su desempeño en las pruebas de autoevaluación
-- Revisar su historial de pruebas
 - Reportar contenido inapropiado o incorrecto que incumpla las normas de la comunidad
 - Obtener puntos de contribución (puntos XP) en función de sus aportes a la comunidad (formular y calificar preguntas, reportes, realizar pruebas, etc.). Dichos puntos le permitirán pertenecer a un rango de acuerdo a su puntuación (Aprendiz → Pensador → Sabio).
 - Mantener una racha de actividad resolviendo al menos una prueba de autoevaluación diaria. Las rachas prolongadas permiten obtener XP extra y desbloquear preguntas mejor calificadas.
