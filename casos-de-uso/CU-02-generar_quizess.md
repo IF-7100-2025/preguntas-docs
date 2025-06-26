@@ -1,4 +1,4 @@
-## Caso de uso: **Generar Quiz**
+# Caso de uso: Generar Quiz
 
 ## Descripción
 Este caso de uso describe el proceso mediante el cual un colaborador autenticado accede a la sección de "Crear Quiz" y genera una prueba estructurada desde el banco de preguntas disponible en la plataforma. El colaborador podrá elegir entre diferentes tipos de quiz según la cantidad de preguntas, y se generará una estructura adecuada sin incluir aún su resolución.
