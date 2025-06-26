@@ -1,0 +1,92 @@
+{
+  "id": "bfa7c3fa-1234-4a0b-b91f-100000000003",
+  "status": "completed",
+  "grade": 100,
+  "questionResults": [
+    {
+      "questionId": "bfa7c3fa-1234-4a0b-b91f-100000000001",
+      "question": "What is the capital of France?",
+      "selectedOptions": [
+        {
+          "id": 1,
+          "answerText": "Paris"
+        }
+      ],
+      "correctOptions": [
+        {
+          "id": 1,
+          "answerText": "Paris"
+        }
+      ],
+      "explanation": "Paris is the capital city."
+    },
+    {
+      "questionId": "bfa7c3fa-1234-4a0b-b91f-100000000004",
+      "question": "What does HTTP stand for?",
+      "selectedOptions": [
+        {
+          "id": 5,
+          "answerText": "HyperText Transfer Protocol"
+        }
+      ],
+      "correctOptions": [
+        {
+          "id": 5,
+          "answerText": "HyperText Transfer Protocol"
+        }
+      ],
+      "explanation": "HyperText Transfer Protocol."
+    },
+    {
+      "questionId": "bfa7c3fa-1234-4a0b-b91f-100000000005",
+      "question": "In which year did World War II end?",
+      "selectedOptions": [
+        {
+          "id": 4123,
+          "answerText": "1945"
+        }
+      ],
+      "correctOptions": [
+        {
+          "id": 4123,
+          "answerText": "1945"
+        }
+      ],
+      "explanation": "The war ended in 1945."
+    },
+    {
+      "questionId": "bfa7c3fa-1234-4a0b-b91f-100000000007",
+      "question": "Name the process by which plants make food.",
+      "selectedOptions": [
+        {
+          "id": 7352,
+          "answerText": "Photosynthesis"
+        }
+      ],
+      "correctOptions": [
+        {
+          "id": 7352,
+          "answerText": "Photosynthesis"
+        }
+      ],
+      "explanation": "Photosynthesis."
+    },
+    {
+      "questionId": "bfa7c3fa-1234-4a0b-b91f-100000000010",
+      "question": "What is the freezing point of water in Celsius?",
+      "selectedOptions": [
+        {
+          "id": 3814,
+          "answerText": "0°C"
+        }
+      ],
+      "correctOptions": [
+        {
+          "id": 3814,
+          "answerText": "0°C"
+        }
+      ],
+      "explanation": "0°C."
+    }
+  ]
+}
