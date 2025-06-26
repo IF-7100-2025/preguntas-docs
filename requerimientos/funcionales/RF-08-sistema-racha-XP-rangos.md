@@ -22,8 +22,7 @@ Se propone implementar un sistema gamificado de seguimiento de progreso que incl
 
 - **Asignación de XP** por actividades como:
   - Publicar preguntas (**10 XP**)
-  - Comentar quizzes de 5 preguntas (**20 XP**) o más de 5 (**50 XP**)
-  - Resolver quizzes (XP proporcional al desempeño)
+  - Resolver quizzes (**50 XP**)
 - **Racha diaria**: El sistema detectará si el colaborador ha tenido actividad continua día a día. Si hubo actividad el día anterior, la racha incrementa. Si no, se reinicia a 1.
 - **Sistema de rangos**: Se definirán umbrales de XP para alcanzar los siguientes niveles:
   - Aprendiz (0–199 XP)

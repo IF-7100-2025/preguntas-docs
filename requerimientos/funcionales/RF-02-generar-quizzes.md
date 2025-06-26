@@ -19,7 +19,7 @@ Se propone que la plataforma implemente un generador de pruebas que seleccione p
 - Poder ser generadas automáticamente por el sistema.
 - Contener una cantidad configurable de preguntas.
 - Ser calificadas automáticamente.
-- Guardar un historial por usuario que incluya fecha, calificación y preguntas respondidas.
+
 
 Este módulo podrá ser accedido desde el perfil del colaborador y también permitirá la revisión de pruebas pasadas.
 
@@ -33,14 +33,13 @@ Las pruebas pueden ser generadas tanto a partir del banco de preguntas como por 
 
 - CU-01: Registrar preguntas en el sistema
 - CU-02: Generación y Realización de Pruebas Automatizadas
-- CU-09: Consultar historial de pruebas
+
 
 ## Criterios de Aceptación
 
 - La plataforma podrá generar pruebas de forma automática utilizando las preguntas almacenadas.
 - Cada prueba se calificará automáticamente al finalizar.
-- Se almacenará un historial detallado de pruebas realizadas por usuario.
-- El usuario podrá acceder a los resultados y respuestas desde su perfil.
+
 
 
 ---

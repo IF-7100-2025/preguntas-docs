@@ -13,7 +13,7 @@ Actualmente, no existe un sistema de autenticación implementado en la plataform
 Se propone implementar una funcionalidad que permita a los usuarios autenticar su identidad a través de un nombre de usuario único y una contraseña. Esta funcionalidad incluirá los siguientes elementos:
 
 - **Formulario de Inicio de Sesión**: Una interfaz donde los usuarios deberán ingresar su nombre de usuario único y contraseña.
-- **Validación de Datos**: El sistema validará que el nombre de usuario exista en la base de datos y que la contraseña corresponda a dicho usuario.
+- **Validación de Datos**: El sistema validará que el nombre de usuario exista en la base de datos y que la contraseña corresponda a dicho usuario, además debe estar correctamente verificado.
 - **Manejo de Errores**: Si las credenciales son incorrectas, el sistema mostrará un mensaje de error claro para que el usuario intente nuevamente.
 - **Acceso Exitoso**: Si las credenciales son correctas, el sistema permitirá al usuario acceder a su cuenta y redirigirá a la página de inicio o dashboard de la plataforma.
 - **Seguridad**: La contraseña será almacenada de manera segura utilizando técnicas de hash para garantizar la protección de los datos del usuario.
@@ -27,6 +27,7 @@ Se propone implementar una funcionalidad que permita a los usuarios autenticar s
 ## Criterios de Aceptación
 - Los usuarios podrán iniciar sesión utilizando su nombre de usuario único y contraseña.
 - El sistema debe validar las credenciales antes de permitir el acceso.
+- El sistema debe validar que el usuario esté verificado.
 - El sistema mostrará un mensaje de error si las credenciales son incorrectas.
 - Los usuarios serán redirigidos a su página principal al iniciar sesión exitosamente.
 
