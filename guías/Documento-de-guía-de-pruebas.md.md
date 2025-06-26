@@ -1,16 +1,18 @@
-# **📚 Guía de Pruebas Unitarias y de Integración
+# **Guía de Pruebas Unitarias y Manuales**
 
-## **1️⃣ Introducción**
+## **Introducción**
 
 Esta guía está destinada a la creación de pruebas unitarias y de integración. A lo largo de este documento, aprenderás cómo usar las herramientas **Mockito**, **Junit** **Spring Boot Test** y **Gherkin** para crear, ejecutar y verificar las pruebas de tu aplicación.
 
-## **2️⃣ ¿Qué son las Pruebas Unitarias y de Integración?**
+***
 
-* **Pruebas Unitarias**: Son pruebas que validan el comportamiento de unidades de código individuales, como métodos o funciones. Estas pruebas verifican que el código de la unidad específica funcione como se espera.
+## **Pruebas unitarias**
 
-* **Pruebas de Integración**: Son pruebas que verifican la correcta interacción de diferentes módulos o componentes dentro del sistema. Por ejemplo, cómo se comunican el frontend y el backend o cómo se integra la aplicación con la base de datos.
+### **¿Qué son las Pruebas Unitarias?**
 
-## **3️⃣ Herramientas a Utilizar 🛠️**
+**Pruebas Unitarias**: Son pruebas que validan el comportamiento de unidades de código individuales, como métodos o funciones. Estas pruebas verifican que el código de la unidad específica funcione como se espera.
+
+## **Herramientas a Utilizar**
 
 ### **Spring Boot Test**
 
@@ -26,9 +28,7 @@ Es un framework ampliamente utilizado para realizar pruebas unitarias. Proporcio
 
 ---
 
-## **3️⃣ Estructura del Proyecto con Patrón CQRS 🗂️**
-
-
+## **Estructura del Proyecto con Patrón CQRS**
 
     question-service
 
@@ -78,19 +78,11 @@ Es un framework ampliamente utilizado para realizar pruebas unitarias. Proporcio
 
                               ├── handlers       	\<-- Aquí van las pruebas unitarias de los handlers
 
-                              ├── controllers    	\<-- Aquí van las pruebas de los controladores
-
-                              └── integration    	\<-- Aquí van las pruebas de integración
-
 ### **Ubicación de las Pruebas:**
 
 * **Pruebas Unitarias de Handlers**: Se encuentran en la carpeta `src/test/java/.../handlers/`.
 
-* **Pruebas de Integración**: Se encuentran en la carpeta `src/test/java/.../integration/`.
-
-* **Pruebas de Controladores**: Si tienes controladores, las pruebas para ellos se almacenan en `controllers/`.
-
-## **4️⃣ Cómo Realizar Pruebas Unitarias 🧑‍💻**
+## **Cómo Realizar Pruebas Unitarias**
 
 ### **Paso 1: Configurar Mockito y JUnit para las Pruebas Unitarias**
 
@@ -126,7 +118,6 @@ Para poder realizar pruebas unitarias utilizando **Mockito** y **JUnit** en un p
 
 3. En la sección `test` de tu `build.gradle`, asegúrate de tener esto para que Gradle reconozca que usarás JUnit 5:
 
-        
         tasks.withType<Test> {
           useJUnitPlatform()
         }
@@ -135,7 +126,7 @@ Para poder realizar pruebas unitarias utilizando **Mockito** y **JUnit** en un p
 
 Una vez configurado **JUnit** y **Mockito**, puedes escribir tus pruebas unitarias. A continuación, te muestro un ejemplo de cómo realizar una prueba unitaria con un mock de un repositorio usando **Mockito**.
 
-  #### **Ejemplo de prueba unitaria con Mockito y JUnit:**
+#### **Ejemplo de prueba unitaria con Mockito y JUnit:**
     import static org.mockito.Mockito.*;
     import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -169,9 +160,9 @@ Una vez configurado **JUnit** y **Mockito**, puedes escribir tus pruebas unitari
 
 **Explicación**:
 
-* **Mockito** se usa para simular el `UserRepository`, lo que permite probar el servicio sin tener que acceder a una base de datos real.
+**Mockito** se usa para simular el `UserRepository`, lo que permite probar el servicio sin tener que acceder a una base de datos real.
 
-* **JUnit** organiza la prueba y verifica que el nombre del usuario devuelto sea "Juan Pérez" utilizando `assertEquals()`.
+**JUnit** organiza la prueba y verifica que el nombre del usuario devuelto sea "Juan Pérez" utilizando `assertEquals()`.
 
 ### **Paso 3: Ejecutar la Prueba**
 
@@ -185,181 +176,128 @@ Una vez configurado **JUnit** y **Mockito**, puedes escribir tus pruebas unitari
 
 Esto ejecutará todas las pruebas en tu proyecto, incluyendo las pruebas unitarias configuradas con **JUnit** y **Mockito**.
 
-## **5️⃣ Cómo Realizar Pruebas de Integración 🔄**
+## **Porcentaje de cobertura en las pruebas**
 
-### **Paso 1: Configurar las Dependencias para las Pruebas de Integración**
+Para que las pruebas unitarias se busca que las mismas se consideren satisfactorias y cumplan con los estándares del proyecto,
+por ello se requiere alcanzar una cobertura mínima del 80% en los componentes handlers de cada microservicio.
+Este nivel de cobertura permite garantiza que la lógica de negocio se valide de forma adecuada,
+así como la existencia de un código funcional, confiable y mantenible.
 
-En un proyecto de **Gradle** que utiliza **Spring Boot**, necesitas agregar las dependencias necesarias para realizar pruebas de integración. Estas dependencias permiten que puedas probar toda la aplicación en un entorno controlado, simulando la interacción entre los componentes del sistema. Este tipo de pruebas solo se harán si es necesario o si sobra tiempo.
+## **Funcionalidades cubiertas por medio de las pruebas**
 
-#### **Incluir las dependencias en Gradle:**
+Para el proyecto se decidió que las pruebas estuvieran enfocadas en cubrir las historias de usuario desarrolladas
+a lo largo del sprint, estas historias de usuario son las siguientes:
 
-1. Abre el archivo `build.gradle.kts`.
+- US01 Registrar preguntas
+- US02 Crear puebas
+- US03 Resolver quizzes
+- US13 Reporte de contenido
+- US14 Racha diaria, XP y rangos
+- US16 Registrarse en la plataforma
+- US20 Iniciar sesion en la plataforma
 
-2. Asegúrate de agregar las siguientes dependencias (si no existen) en la sección `dependencies`:
+## **Jacoco**
 
-          dependencies {
+Dado que Spring Boot no posee por defecto una manera de verificar el estado de cobertura del codigo, se incoporó Jacoco a los test unitarios,
+JaCoCo (Java Code Coverage) es una herramienta que permite medir la cobertura de código en proyectos Java, incluyendo aquellos desarrollados con Spring Boot.
+Su propósito principal es verificar qué partes del código son ejecutadas durante las pruebas unitarias, ayudando a identificar secciones no probadas y mejorar la calidad del software.
+JaCoCo genera reportes detallados por medio de un html que muestran el resultado de los test realizados.
 
-        // Dependencia de Spring Boot Test para realizar pruebas de integración
-        testImplementation("org.springframework.boot:spring-boot-starter-test")
-        }
+Para implementar Jacoco en el código necesita mofificar el archivo `build.gradle.kts` de la siguiente manera:
 
-* **`spring-boot-starter-test`**: Proporciona todas las herramientas necesarias para realizar pruebas en aplicaciones basadas en Spring Boot, como `@SpringBootTest`, `@AutoConfigureMockMvc`, entre otras.
+`plugins {
+         java
+         id("org.springframework.boot") version "3.4.3"
+         id("io.spring.dependency-management") version "1.1.7"
+         id("jacoco")
+}`
 
-**Nota:** La mayoría de dependencias que usamos en las pruebas unitarias son las mismas que se utilizan en las pruebas de integración, por lo que no hace falta vovler a añadirlas.
+`tasks.withType<Test> {
+	tasks.test {
+		finalizedBy(tasks.jacocoTestReport)
+	}
+	tasks.jacocoTestReport {
+		dependsOn(tasks.test)
+	}
+}`
 
-### **Paso 2: Escribir una Prueba de Integración con Spring Boot Test**
+`jacoco {
+   toolVersion = "0.8.13"
+   reportsDirectory = layout.buildDirectory.dir("customJacocoReportDir")
+}`
 
-Una vez configuradas las dependencias, puedes escribir una **prueba de integración** para verificar cómo interactúan los componentes de tu aplicación. Aquí tienes un ejemplo de cómo escribir una prueba para un **Command Handler** que interactúa con el **repositorio** y verifica que el usuario se ha registrado correctamente en la base de datos.
+`tasks.jacocoTestReport {
+   reports {
+      xml.required = false
+      csv.required = false
+      html.outputLocation = layout.buildDirectory.dir("jacocoHtml")
+   }
+}`
 
-#### **Ejemplo de prueba de integración usando Spring Boot Test:**
+Una vez ejecutados los test de manera exitosa el reporte se maneja de manera dinamica en el código para ser consultado.
 
-    import org.springframework.beans.factory.annotation.Autowired;
-    import org.springframework.boot.test.context.SpringBootTest;
-    import org.junit.jupiter.api.Test;
-    import static org.junit.jupiter.api.Assertions.*;
+## **Microservicios probados**
 
+Dado que se decidió probar la lógica de negocio, los servicios que contienen pruebas son los servicios de ia, el servicio de preguntas
+y el servicio de autentificación, sin embargo, el servicio de autentificación tiene sus pruebas ejecutadas de manera automática debido
+a la limitante de que se encuentra construído con la versión de gradle 8.4, la cual no posee la facilidad de ejecutar las mismas por medio
+del wrapper con el comando ./gradlew test.
 
-    @SpringBootTest // Carga el contexto completo de Spring
-    public class CreateUserCommandHandlerIntegrationTest {
+***
 
+## Pruebas Manuales
 
-      @Autowired
-      private CreateUserCommandHandler handler;
+### **¿Qué son las Pruebas Manuales?**
 
+**Pruebas Manuales**: Consisten en verificar de forma directa que una funcionalidad del sistema funcione según lo esperado, sin el uso de automatización.
 
-      @Autowired
-      private UserRepository userRepository;
+## **Herramientas a Utilizar**
 
+### **Postman**
 
-      @Test
-      public void testHandleCreateUserCommandIntegration() {
-          // Crear el comando para el registro de usuario
-          CreateUserCommand command = new CreateUserCommand("Juan Pérez", "juan@example.com");
+Herramienta que permite enviar y validar solicitudes HTTP para probar el comportamiento de APIs de forma rápida y sencilla.
 
+**Preparación del entorno**
 
-          // Ejecutar el handler que procesa el comando
-          User result = handler.handle(command);
+Para realizar pruebas manuales primero se deben comprobar 2 aspectos:
 
+- a. Que Postman tenga las URLs correctas, encabezados y autenticación configurados.
+- b. Que cada uno de los microservicios se encuentre en ejecucion.
 
-          // Verificar que el usuario fue creado en la base de datos
-          assertNotNull(result);
-          assertTrue(userRepository.existsById(result.getId())); // Verifica que el usuario exista en la base de datos
-      }
-    }
+**Revisión del Caso de Uso**
 
+Por medio de las pruebas manuales se busca que las cartas definidas cumplas con los criterios de aceptación que poseen:
+Para ello se contemplan 3 escenarios:
 
-**Explicación**:
+- a. El flujo ideal o normal de operación.
+- b. Escenarios concretos a validar, en este caso las cartas definidas.
 
-* **`@SpringBootTest`**: Esta anotación carga todo el contexto de Spring para realizar pruebas de integración, lo que significa que se simula el comportamiento de toda la aplicación, incluyendo la base de datos.
+**Criterios de validación**
 
-* **`@Autowired`**: Inyecta las dependencias necesarias, como el `CreateUserCommandHandler` y el `UserRepository`, para que puedas usarlas en la prueba.
+Una prueba se considera exitosa si:
 
-* **Verificación**: Se verifica que el usuario ha sido **creado correctamente** y almacenado en la base de datos utilizando `userRepository.existsById()`.
+La API responde con el código correcto (200 o 201).
 
-### **Paso 3: Ejecutar la Prueba de Integración**
+La información devuelta es coherente con el caso de uso.
 
-Para ejecutar las pruebas de integración:
+**Ejecución de pruebas**
 
-1. **Ejecuta la prueba** en **IntelliJ IDEA** haciendo clic derecho sobre el archivo de prueba y seleccionando **Run 'CreateUserCommandHandlerIntegrationTest'**.
+Establecer la URL del endpoint de manera manual o por medio de la variable.
 
-2. O también puedes ejecutar las pruebas desde la línea de comandos con Gradle:
+Seleccionar el método HTTP correspondiente (GET, POST, PUT).
 
-./gradlew test
+Definir el cuerpo de la solicitud en caso de que se requiera.
 
-Esto ejecutará todas las pruebas en tu proyecto, incluyendo las pruebas de integración.
+Agregar el token con la sesion iniciada.
 
-## **6️⃣ Escribir Pruebas con Gherkin 📝**
+Envía la solicitud desde Postman.
 
-**Gherkin** es un lenguaje de propósito específico (DSL) utilizado para describir el comportamiento del sistema de manera comprensible para todas las partes involucradas en el proyecto. A continuación, aprenderás cómo usar Gherkin para documentar los **escenarios de prueba** sin necesidad de ejecutar las pruebas automáticamente.
+Verificar el código de respuesta y el contenido.
 
-### **Paso 1: Configuración de Gherkin sin Cucumber**
+Verificar que el mensaje obtenido en la respuesta sea satisfactorio
 
-Para trabajar con **Gherkin** sin **Cucumber**, simplemente necesitas agregar la dependencia de **Gherkin** en tu proyecto **Gradle**. Esto te permitirá escribir los archivos `.feature` que describen los escenarios de prueba.
+**Cobertura de pruebas manuales**
 
-#### **Incluir la dependencia de Gherkin en Gradle:**
-
-1. Abre tu archivo `build.gradle.kts`.
-
-2. Agrega la siguiente dependencia para Gherkin en la sección `dependencies`:  
-          
-          dependencies {
-
-        // Dependencia de Gherkin para trabajar con archivos .feature
-        testImplementation("io.cucumber:gherkin:20.1.0")
-        
-        }
-
-     
-   Con esta dependencia, puedes trabajar con **archivos `.feature`** y escribir los escenarios de prueba utilizando la sintaxis de **Gherkin**, sin necesidad de integrar Cucumber para la ejecución automática de las pruebas.
-   
-### **Paso 2: Estructura de Archivos y Creación de Archivos .feature**  
-1. **Crea una carpeta para los archivos `.feature`**:
-
-   * En tu proyecto, dentro de la carpeta `src/test/resources`, crea una carpeta llamada **`features`**. Aquí es donde colocarás todos los archivos `.feature` que describen los escenarios de prueba.
-
-2. **Crear un archivo `.feature`**:
-
-   * Dentro de la carpeta `features`, crea un archivo con la extensión `.feature`. Los archivos `.feature` contienen los **escenarios de prueba** en formato **Gherkin**.
-
-   #### **Ejemplo de archivo `.feature`:**
-
-        Feature: Registro de Usuario
-
-
-        Scenario: Registro con datos válidos
-
-        Given que el usuario está en la página de registro
-
-        When el usuario ingresa el nombre "Juan Pérez" y el correo "juan@example.com"
-
-        Then el sistema debería registrar al usuario y enviar un correo de verificación
-
-
-        Scenario: Registro con correo duplicado
-
-        Given que el usuario está en la página de registro
-
-        When el usuario ingresa el correo "juan@example.com"
-
-        Then el sistema debería mostrar un mensaje de error indicando que el correo ya está registrado
-
-   
-
-**Explicación**:
-
-* **Feature**: Representa una funcionalidad o una característica que estamos probando (en este caso, el registro de usuario).
-
-* **Scenario**: Es un escenario o caso de prueba dentro de esa funcionalidad.
-
-  * **Given**: Describe el contexto inicial (por ejemplo, el usuario está en la página de registro).
-
-  * **When**: Describe la acción que realiza el usuario.
-
-  * **Then**: Describe el resultado esperado después de realizar la acción.
-
-
-  ### **Paso 2: Organización de los Archivos `.feature`**
-
-Para organizar bien los archivos de prueba, puedes agruparlos en subcarpetas según el tipo de funcionalidad que estés probando. Por ejemplo, si tienes diferentes funcionalidades como **registro de usuario** y **login**, podrías organizar los archivos de la siguiente manera:
-
-    src/test/resources/features/
-
-    ├── registro
-
-    │   └── registro-usuario.feature
-
-    └── login
-
-      └── login-usuario.feature
-
-## **7️⃣ Conclusión 🎯**
-
-Ahora sabes cómo realizar **pruebas unitarias y de integración** usando **Mockito**, **Spring Boot Test** y **Gherkin** dentro de un proyecto que sigue el patrón **CQRS**. Siguiendo estos pasos, podrás asegurarte de que tanto los **command handlers** como los **componentes integrados** funcionen correctamente.
-
-Recuerda:
-
-* **Mockito** para simular dependencias y realizar pruebas unitarias.
-
-* **Spring Boot Test** para verificar la integración entre los componentes del sistema.
-
-* **Gherkin** para documentar escenarios de prueba de manera clara y comprensible.
+Al igual que las pruebas unitarias cada prueba manual debe validar una funcionalidad
+en este caso cada una debe estar ligada a una carta que se debe haber completado de manera
+satisfactoria por medio de sus criterios de aceptación.
